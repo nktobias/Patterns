@@ -1,0 +1,6 @@
+c:\users\ivanjanovic\documents\visual studio 2015\Projects\Patterns\DiceRoller\bin\Debug\DiceRoller.exe.config
+c:\users\ivanjanovic\documents\visual studio 2015\Projects\Patterns\DiceRoller\obj\Debug\DiceRoller.csprojResolveAssemblyReference.cache
+c:\users\ivanjanovic\documents\visual studio 2015\Projects\Patterns\DiceRoller\bin\Debug\DiceRoller.exe
+c:\users\ivanjanovic\documents\visual studio 2015\Projects\Patterns\DiceRoller\bin\Debug\DiceRoller.pdb
+c:\users\ivanjanovic\documents\visual studio 2015\Projects\Patterns\DiceRoller\obj\Debug\DiceRoller.exe
+c:\users\ivanjanovic\documents\visual studio 2015\Projects\Patterns\DiceRoller\obj\Debug\DiceRoller.pdb
