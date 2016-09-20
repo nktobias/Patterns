@@ -44,8 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DiceRoller.cs" />
+    <Compile Include="EdgeThrowResolver.cs" />
+    <Compile Include="NormalThrow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thrower.cs" />
+    <Compile Include="ThrowResolver.cs" />
+    <Compile Include="ThrowResult.cs" />
+    <Compile Include="ThrowResultType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

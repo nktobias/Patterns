@@ -4,7 +4,7 @@ namespace DiceRoller
 {
     public class DiceRoller
     {
-        private Random _random;
+        private readonly Random _random;
         private static DiceRoller _instance;
 
         public static DiceRoller Instance => _instance ?? (_instance = new DiceRoller());
@@ -18,6 +18,5 @@ namespace DiceRoller
         {
             return _random.Next(1, 7);
         }
-
     }
 }

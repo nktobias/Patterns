@@ -1,21 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DiceRoller
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine(DiceRoller.Instance.RollSix());
-            Console.WriteLine(DiceRoller.Instance.RollSix());
-            Console.WriteLine(DiceRoller.Instance.RollSix());
-            Console.WriteLine(DiceRoller.Instance.RollSix());
-            Console.WriteLine(DiceRoller.Instance.RollSix());
+            Char c = 'a';
+            while (c != 'x')
+            {
+                c = Console.ReadKey().KeyChar;
 
+                Console.WriteLine("Normal Throw");
+                Thrower normalThrower = new Thrower(new NormalThrowResolver());
+                ThrowResult normalResult = normalThrower.Throw(10);
+                Console.WriteLine("Result: {0}", normalResult.Type);
+                
+                Console.WriteLine("Edge throw");
+                Thrower thrower = new Thrower(new EdgeThrowResolver());
+                ThrowResult result = thrower.Throw(10);
+                Console.WriteLine("Result: {0}", result.Type);
+                Console.WriteLine("-----------------------------------------");
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Good bye!");
             Console.ReadLine();
         }
     }
