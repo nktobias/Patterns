@@ -10,6 +10,8 @@ namespace DiceRoller
     {
         private readonly ThrowResolver _throwResolver;
 
+        public event EventHandler SixWasRolled;
+
         public Thrower(ThrowResolver throwResolver)
         {
             _throwResolver = throwResolver;
@@ -22,9 +24,18 @@ namespace DiceRoller
             {
                 int number = DiceRoller.Instance.RollSix();
                 dices.Add(number);
+                if (number == 6)
+                {
+                    OnSixWasRolled();
+                }
                 Console.Write("{0}, ", number);
             }
             return _throwResolver.Resolve(dices.ToArray());
+        }
+
+        protected virtual void OnSixWasRolled()
+        {
+            SixWasRolled?.Invoke(this, EventArgs.Empty);
         }
     }
 }
